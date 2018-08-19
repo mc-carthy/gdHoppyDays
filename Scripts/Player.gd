@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
 const SPEED = 750
-const GRAVITY = 1000
+const GRAVITY = 3000
 const UP = Vector2(0, -1)
+const JUMP_SPEED = -1500
 
 var motion = Vector2()
 
@@ -20,16 +21,15 @@ func run():
     $AnimatedSprite.flip_h = false
     if Input.is_action_pressed("ui_right"):
         motion.x += SPEED
-        $AnimatedSprite.play('run')
+        if is_on_floor():
+            $AnimatedSprite.play('run')
     if Input.is_action_pressed("ui_left"):
         motion.x -= SPEED
-        $AnimatedSprite.play('run')
+        if is_on_floor():
+            $AnimatedSprite.play('run')
         $AnimatedSprite.flip_h = true
-    if motion.x == 0:
+    if motion.x == 0 and motion.y == 0:
         $AnimatedSprite.play('idle')
-    
-    if Input.is_action_pressed("ui_up"):
-        $AnimatedSprite.play('jump')
 
 func fall(delta):
     if is_on_floor():
@@ -38,4 +38,5 @@ func fall(delta):
         motion.y += GRAVITY * delta
 
 func jump():
-    pass
+    if is_on_floor() and Input.is_action_pressed("ui_up"):
+            motion.y = JUMP_SPEED
