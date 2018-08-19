@@ -13,13 +13,13 @@ func _physics_process(delta):
         motion.x += SPEED
         $AnimatedSprite.play('run')
         $AnimatedSprite.flip_h = false
-        if Input.is_action_pressed("ui_left"):
-            motion.x -= SPEED
-            $AnimatedSprite.play('run')
-            $AnimatedSprite.flip_h = true
-        if motion.x == 0:
-            $AnimatedSprite.play('idle')
-            $AnimatedSprite.flip_h = false
+    if Input.is_action_pressed("ui_left"):
+        motion.x -= SPEED
+        $AnimatedSprite.play('run')
+        $AnimatedSprite.flip_h = true
+    if motion.x == 0:
+        $AnimatedSprite.play('idle')
+        $AnimatedSprite.flip_h = false
     
     if Input.is_action_pressed("ui_up"):
         $AnimatedSprite.play('jump')
