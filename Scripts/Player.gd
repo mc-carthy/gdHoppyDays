@@ -16,20 +16,18 @@ func _physics_process(delta):
     jump()
     move_and_slide(motion, UP)
 
+func _process(delta):
+    update_animation(motion)
+
+func update_animation(motion):
+    $AnimatedSprite.update(motion)
+
 func run():
     motion.x = 0
-    $AnimatedSprite.flip_h = false
     if Input.is_action_pressed("ui_right"):
         motion.x += SPEED
-        if is_on_floor():
-            $AnimatedSprite.play('run')
     if Input.is_action_pressed("ui_left"):
         motion.x -= SPEED
-        if is_on_floor():
-            $AnimatedSprite.play('run')
-        $AnimatedSprite.flip_h = true
-    if motion.x == 0 and motion.y == 0:
-        $AnimatedSprite.play('idle')
 
 func fall(delta):
     if is_on_floor():
