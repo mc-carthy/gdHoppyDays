@@ -14,8 +14,13 @@ position = Vector2( 640, 320 )
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
 
+zoom = Vector2( 1.5, 1.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 3500
+limit_bottom = 1000
 smoothing_enabled = true
-_sections_unfolded = [ "Smoothing" ]
+_sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
@@ -35,6 +40,6 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 196625, 0, 0, 393230, 0, 0, 524294, 0, 0, 655360, 0, 0 )
+tile_data = PoolIntArray( 196625, 0, 0, 327719, 4, 0, 393230, 0, 0, 524294, 0, 0, 524339, 4, 0, 655360, 0, 0, 655392, 4, 0, 720922, 4, 0, 786479, 4, 0, 917542, 4, 0, 917547, 4, 0 )
 
 
