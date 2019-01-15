@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/platformTiles.tres" type="TileSet" id=3]
+[ext_resource path="res://Scenes/spikes_top.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/spikes_bottom.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
 position = Vector2( 640, 320 )
-world_limit = 3000
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
 
@@ -37,10 +38,21 @@ cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
 collision_bounce = 0.0
-collision_layer = 1
+collision_layer = 2
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 196625, 0, 0, 196634, 7, 0, 196640, 7, 0, 262197, 5, 0, 327719, 4, 0, 393230, 0, 0, 524294, 0, 0, 524339, 4, 0, 589885, 5, 0, 655360, 0, 0, 655392, 4, 0, 720921, 4, 0, 786479, 4, 0, 917542, 4, 0, 917547, 4, 0, 983052, 6, 0, 1179668, 6, 0, 1179681, 6, 0, 1376260, 0, 0, 1376313, 5, 0, 1441817, 3, 0, 1572908, 6, 0, 1703967, 6, 0, 1703988, 5, 0, 1835023, 0, 0, 1900548, 0, 0, 2097179, 0, 0, 2162730, 2, 0, 2359333, 6, 0, 2359349, 5, 0, 2490381, 1, 0, 2490392, 1, 0, 2490410, 0, 0, 2686979, 1, 0 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="spikes" type="Node2D" parent="." index="2"]
+
+[node name="spikes_top" parent="spikes" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 1650, 680 )
+
+[node name="spikes_bottom" parent="spikes" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 1730, 300 )
 
 
