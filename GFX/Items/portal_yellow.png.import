@@ -7,10 +7,7 @@ path="res://.import/portal_yellow.png-21769b4c77360f0e23d9f33d6c050916.stex"
 [deps]
 
 source_file="res://GFX/Items/portal_yellow.png"
-source_md5="21f4a9cbadb56b53b61faa70f1356d6e"
-
 dest_files=[ "res://.import/portal_yellow.png-21769b4c77360f0e23d9f33d6c050916.stex" ]
-dest_md5="5bc5207a0a6137158195294abdbbf657"
 
 [params]
 

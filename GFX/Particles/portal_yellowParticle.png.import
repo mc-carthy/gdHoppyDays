@@ -7,10 +7,7 @@ path="res://.import/portal_yellowParticle.png-be677bbd73e1377d329ce790d7ee999c.s
 [deps]
 
 source_file="res://GFX/Particles/portal_yellowParticle.png"
-source_md5="3aa24a0a2b2d69f5b494aa974f64ebec"
-
 dest_files=[ "res://.import/portal_yellowParticle.png-be677bbd73e1377d329ce790d7ee999c.stex" ]
-dest_md5="06d4e71038b8d18638bac855e7b9615a"
 
 [params]
 

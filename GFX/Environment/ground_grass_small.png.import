@@ -7,10 +7,7 @@ path="res://.import/ground_grass_small.png-1aa0ecc6e3c7915d2c46df3fed4d57df.stex
 [deps]
 
 source_file="res://GFX/Environment/ground_grass_small.png"
-source_md5="916c2660f1a8332a760077e7a25e6a38"
-
 dest_files=[ "res://.import/ground_grass_small.png-1aa0ecc6e3c7915d2c46df3fed4d57df.stex" ]
-dest_md5="bb1836a833801822a79031f8562b25ca"
 
 [params]
 

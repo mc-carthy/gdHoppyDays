@@ -7,10 +7,7 @@ path="res://.import/bannerHanging.png-1eabc8458446846ac3ecce3d92c1cbbe.stex"
 [deps]
 
 source_file="res://GFX/HUD/bannerHanging.png"
-source_md5="a3414063aae711aa70d333ad76f76dd4"
-
 dest_files=[ "res://.import/bannerHanging.png-1eabc8458446846ac3ecce3d92c1cbbe.stex" ]
-dest_md5="dc7c5ebbe9eecfee904afb4e508dc8eb"
 
 [params]
 

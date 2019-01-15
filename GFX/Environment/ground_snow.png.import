@@ -7,10 +7,7 @@ path="res://.import/ground_snow.png-749d39f4d0894a609edc68574a3a0f1c.stex"
 [deps]
 
 source_file="res://GFX/Environment/ground_snow.png"
-source_md5="e259012494f2a590fa6ea41bcc4bf7bd"
-
 dest_files=[ "res://.import/ground_snow.png-749d39f4d0894a609edc68574a3a0f1c.stex" ]
-dest_md5="18abc56f961850a2540b289a68b2d482"
 
 [params]
 

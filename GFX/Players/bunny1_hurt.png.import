@@ -7,10 +7,7 @@ path="res://.import/bunny1_hurt.png-5136f8b99be69ae666436abb9e0617a3.stex"
 [deps]
 
 source_file="res://GFX/Players/bunny1_hurt.png"
-source_md5="202d8d367f6958d27de42bce4a89e0b9"
-
 dest_files=[ "res://.import/bunny1_hurt.png-5136f8b99be69ae666436abb9e0617a3.stex" ]
-dest_md5="3f4c5d329e87b3122a48843ab5702a5e"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/Chiptune_Adventures_1.ogg-52fc949b19c914776132d8c6ca6f4122.o
 [deps]
 
 source_file="res://SFX/Chiptune_Adventures_1.ogg"
-source_md5="4e5df706b88ed3edc4a1c5ccaf0f573a"
-
 dest_files=[ "res://.import/Chiptune_Adventures_1.ogg-52fc949b19c914776132d8c6ca6f4122.oggstr" ]
-dest_md5="c9ee6c7021ae869457b7f842058e0d0b"
 
 [params]
 

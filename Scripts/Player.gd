@@ -11,13 +11,17 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+    update_motion(delta)
+
+func _process(delta):
+    update_animation(motion)
+
+func update_motion(delta):
     fall(delta)
     run()
     jump()
     move_and_slide(motion, UP)
 
-func _process(delta):
-    update_animation(motion)
 
 func update_animation(motion):
     $AnimatedSprite.update(motion)

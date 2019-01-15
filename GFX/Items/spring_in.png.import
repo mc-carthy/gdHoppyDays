@@ -7,10 +7,7 @@ path="res://.import/spring_in.png-54b9410e4f4b64f2cf25af5e76d33398.stex"
 [deps]
 
 source_file="res://GFX/Items/spring_in.png"
-source_md5="0b33d1bf4c464c5b1e94ddbb19f6ad4f"
-
 dest_files=[ "res://.import/spring_in.png-54b9410e4f4b64f2cf25af5e76d33398.stex" ]
-dest_md5="d020c166f8b6dfe0cf5acf2345e5acd1"
 
 [params]
 

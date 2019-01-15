@@ -7,10 +7,7 @@ path="res://.import/ground_cake_small.png-2efd8d48e86aefb984c583b5afb47296.stex"
 [deps]
 
 source_file="res://GFX/Environment/ground_cake_small.png"
-source_md5="9d09cbab0fec5aebc8637c6b5e137dea"
-
 dest_files=[ "res://.import/ground_cake_small.png-2efd8d48e86aefb984c583b5afb47296.stex" ]
-dest_md5="681f50a84a837b436e0a8c7c6a28c871"
 
 [params]
 

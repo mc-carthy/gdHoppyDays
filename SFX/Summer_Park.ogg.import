@@ -7,10 +7,7 @@ path="res://.import/Summer_Park.ogg-cf6731f2fc24bf54214f696e58e51c9a.oggstr"
 [deps]
 
 source_file="res://SFX/Summer_Park.ogg"
-source_md5="0c9a030a4ab6e49863f0b9bacc560c93"
-
 dest_files=[ "res://.import/Summer_Park.ogg-cf6731f2fc24bf54214f696e58e51c9a.oggstr" ]
-dest_md5="3a99a0c01f26e86be65811965b4ea057"
 
 [params]
 
