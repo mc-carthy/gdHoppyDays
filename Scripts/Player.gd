@@ -41,11 +41,8 @@ func fall(delta):
         motion.y += GRAVITY * delta
 
     if position.y > world_limit:
-        end_game()
+        get_parent().end_game()
 
 func jump():
     if is_on_floor() and Input.is_action_pressed("ui_up"):
             motion.y = JUMP_SPEED
-
-func end_game():
-    get_tree().change_scene("res://Scenes/gameOver.tscn")
