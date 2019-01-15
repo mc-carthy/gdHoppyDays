@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/spikes_top.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/hazards.gd" type="Script" id=1]
 [ext_resource path="res://GFX/Environment/spikes_top.png" type="Texture" id=2]
 
-[node name="spikes_top" type="Area2D"]
+[node name="spikes_top" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -30,6 +30,6 @@ visible = false
 build_mode = 0
 polygon = PoolVector2Array( -33.3295, -26.4607, 33.0399, -26.4607, 47.0347, 26.126, -46.9003, 26.338 )
 
-[connection signal="body_entered" from="." to="." method="_on_spikes_top_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 
