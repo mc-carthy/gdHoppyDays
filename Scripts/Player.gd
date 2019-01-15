@@ -9,7 +9,7 @@ var motion = Vector2()
 export var world_limit = 3000
 
 func _ready():
-	pass
+	global.player = self
 
 func _physics_process(delta):
     update_motion(delta)
@@ -41,7 +41,7 @@ func fall(delta):
         motion.y += GRAVITY * delta
 
     if position.y > world_limit:
-        get_parent().end_game()
+        global.gameState.end_game()
 
 func jump():
     if is_on_floor() and Input.is_action_pressed("ui_up"):
