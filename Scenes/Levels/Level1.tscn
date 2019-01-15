@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/gameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/platformTiles.tres" type="TileSet" id=4]
 [ext_resource path="res://Scenes/spikes_top.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/spikes_bottom.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=7]
 
 [node name="Level1" type="Node2D"]
 
@@ -51,6 +52,8 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="spikes" type="Node2D" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="spikes_top" parent="spikes" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 1650, 680 )
@@ -58,6 +61,12 @@ position = Vector2( 1650, 680 )
 [node name="spikes_bottom" parent="spikes" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 1730, 300 )
+
+[node name="coins" type="Node2D" parent="." index="3"]
+
+[node name="Coin" parent="coins" index="0" instance=ExtResource( 7 )]
+
+position = Vector2( 1380, 90 )
 
 [connection signal="body_entered" from="spikes/spikes_bottom" to="spikes/spikes_bottom" method="_on_spikes_top_body_entered"]
 
