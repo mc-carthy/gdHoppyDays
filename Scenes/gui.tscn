@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/gui.gd" type="Script" id=1]
 [ext_resource path="res://GFX/HUD/bannerHanging.png" type="Texture" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://GFX/HUD/coin_bronze.png" type="Texture" id=4]
 [ext_resource path="res://GFX/HUD/lifes.png" type="Texture" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 
 size = 50
 use_mipmaps = false
@@ -14,7 +14,64 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="gui" type="CanvasLayer"]
+[sub_resource type="Animation" id=2]
+
+resource_name = "coinPulse"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner/HBoxContainer/coinIcon:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "hurt"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner/HBoxContainer/lifeIcon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "lifePulse"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner/HBoxContainer/lifeIcon:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[node name="gui" type="CanvasLayer" index="0"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -78,7 +135,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "00"
 percent_visible = 1.0
 lines_skipped = 0
@@ -94,7 +151,7 @@ anchor_bottom = 0.0
 margin_left = 70.0
 margin_right = 130.0
 margin_bottom = 71.0
-rect_pivot_offset = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 30, 35.5 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
@@ -102,6 +159,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
 stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
 
 [node name="separator" type="TextureRect" parent="banner/HBoxContainer" index="2"]
 
@@ -140,7 +198,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "00"
 percent_visible = 1.0
 lines_skipped = 0
@@ -156,7 +214,7 @@ anchor_bottom = 0.0
 margin_left = 236.0
 margin_right = 288.0
 margin_bottom = 71.0
-rect_pivot_offset = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 26, 35.5 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
@@ -164,5 +222,18 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 5 )
 stretch_mode = 0
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/coinPulse = SubResource( 2 )
+anims/hurt = SubResource( 4 )
+anims/lifePulse = SubResource( 3 )
+blend_times = [  ]
 
 
