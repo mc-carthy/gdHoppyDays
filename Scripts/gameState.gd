@@ -26,6 +26,7 @@ func hurt():
 
 func coin_up():
     GUI.coin_up()
+
     coins += 1
     update_gui()
     if coins % coins_for_extra_life == 0:
