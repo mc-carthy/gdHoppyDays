@@ -36,3 +36,6 @@ func coin_up():
 
 func end_game():
     get_tree().change_scene(global.levelGameOver)
+
+func _on_portal_body_entered(body):
+    end_game()
