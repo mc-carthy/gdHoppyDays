@@ -35,4 +35,4 @@ func coin_up():
         update_gui()
 
 func end_game():
-    get_tree().change_scene("res://Scenes/gameOver.tscn")
+    get_tree().change_scene(global.levelGameOver)
