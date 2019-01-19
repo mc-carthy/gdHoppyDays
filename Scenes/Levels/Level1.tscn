@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/gameState.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scripts/coin_sfx.gd" type="Script" id=12]
 [ext_resource path="res://SFX/pain.ogg" type="AudioStream" id=13]
 [ext_resource path="res://Scripts/hurt_sfx.gd" type="Script" id=14]
+[ext_resource path="res://Scenes/jumpPad.tscn" type="PackedScene" id=15]
 
 [node name="Level1" type="Node2D" index="0"]
 
@@ -77,106 +78,108 @@ editor/display_folded = true
 [node name="Coin" parent="coins" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 1380, 120 )
-frame = 0
+frame = 5
 
 [node name="Coin7" parent="coins" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 1760, 120 )
-frame = 0
+frame = 5
 
 [node name="Coin8" parent="coins" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 2150, 120 )
-frame = 0
+frame = 5
 
 [node name="Coin9" parent="coins" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 2600, 250 )
-frame = 5
+frame = 4
 
 [node name="Coin10" parent="coins" index="4" instance=ExtResource( 7 )]
 
 position = Vector2( 3110, 690 )
-frame = 5
+frame = 4
 
 [node name="Coin11" parent="coins" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 3070, 570 )
-frame = 4
+frame = 3
 
 [node name="Coin12" parent="coins" index="6" instance=ExtResource( 7 )]
 
 position = Vector2( 3020, 460 )
-frame = 3
+frame = 2
 
 [node name="Coin13" parent="coins" index="7" instance=ExtResource( 7 )]
 
 position = Vector2( 2940, 370 )
-frame = 2
 
 [node name="Coin14" parent="coins" index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 2860, 280 )
-frame = 2
 
 [node name="Coin15" parent="coins" index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 2750, 260 )
-frame = 2
 
 [node name="Coin16" parent="coins" index="10" instance=ExtResource( 7 )]
 
 position = Vector2( 2120, 550 )
+frame = 0
 
 [node name="Coin17" parent="coins" index="11" instance=ExtResource( 7 )]
 
 position = Vector2( 2200, 550 )
+frame = 0
 
 [node name="Coin18" parent="coins" index="12" instance=ExtResource( 7 )]
 
 position = Vector2( 2320, 580 )
-frame = 0
+frame = 5
 
 [node name="Coin19" parent="coins" index="13" instance=ExtResource( 7 )]
 
 position = Vector2( 2390, 640 )
-frame = 5
+frame = 4
 
 [node name="Coin20" parent="coins" index="14" instance=ExtResource( 7 )]
 
 position = Vector2( 2470, 730 )
-frame = 4
+frame = 3
 
 [node name="Coin21" parent="coins" index="15" instance=ExtResource( 7 )]
 
 position = Vector2( 2530, 830 )
-frame = 4
+frame = 3
 
 [node name="Coin2" parent="coins" index="16" instance=ExtResource( 7 )]
 
 position = Vector2( 930, 310 )
+frame = 0
 
 [node name="Coin3" parent="coins" index="17" instance=ExtResource( 7 )]
 
 position = Vector2( 990, 200 )
-frame = 0
+frame = 5
 
 [node name="Coin4" parent="coins" index="18" instance=ExtResource( 7 )]
 
 position = Vector2( 1060, 120 )
-frame = 5
+frame = 4
 
 [node name="Coin5" parent="coins" index="19" instance=ExtResource( 7 )]
 
 position = Vector2( 1150, 120 )
-frame = 5
+frame = 4
 
 [node name="Coin6" parent="coins" index="20" instance=ExtResource( 7 )]
 
 position = Vector2( 1250, 120 )
-frame = 5
+frame = 4
 
 [node name="sound" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="bgm" type="AudioStreamPlayer" parent="sound" index="0"]
 
@@ -216,6 +219,12 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 script = ExtResource( 14 )
+
+[node name="jumpPads" type="Node2D" parent="." index="5"]
+
+[node name="jumpPad" parent="jumpPads" index="0" instance=ExtResource( 15 )]
+
+position = Vector2( 1380, 1130 )
 
 [connection signal="body_entered" from="spikes/spikes_bottom" to="spikes/spikes_bottom" method="_on_spikes_top_body_entered"]
 
