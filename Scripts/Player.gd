@@ -36,7 +36,9 @@ func run():
         motion.x -= SPEED
 
 func fall(delta):
-    if is_on_floor() or is_on_ceiling():
+    if is_on_ceiling():
+        motion.y = 0
+    elif motion.y > JUMP_SPEED * JUMP_BOOST and is_on_floor():
         motion.y = 0
     else:
         motion.y += GRAVITY * delta
